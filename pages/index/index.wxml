@@ -1,0 +1,52 @@
+<view class="tabbar">
+  <view id="1" class="tabbox {{ menuId === 1 ? 'curtab' : ''}} " bindtap="clickCurTab">
+    <view class="tabico ico-recom {{ menuId === 1 ? 'cur-recom' : ''}}"></view>
+    <text class="tabit {{ menuId === 1 ? 'curit' : ''}}">今日推荐</text>
+  </view>
+  <view id="2" class="tabbox {{ menuId === 2 ? 'curtab' : ''}} " bindtap="clickCurTab">
+    <view class="tabico ico-fashion {{ menuId === 2 ? 'cur-fashion' : '' }}"></view>
+    <text class="tabit {{menuId === 2 ? 'curit' : ''}}">时尚美妆</text>
+  </view>
+  <view id="3" class="tabbox {{ menuId === 3 ? 'curtab' : ''}} " bindtap="clickCurTab">
+    <view class="tabico ico-clash {{ menuId === 3 ? 'cur-clash' : '' }}"></view>
+    <text class="tabit {{ menuId === 3 ? 'curit' : ''}}">个护清洁</text>
+  </view>
+  <view id="4" class="tabbox {{ menuId === 4 ? 'curtab' : ''}} " bindtap="clickCurTab">
+    <view class="tabico ico-food {{ menuId === 4 ? 'cur-food' : ''}}"></view>
+    <text class="tabit {{ menuId === 4 ? 'curit' : ''}}">食品饮料</text>
+  </view>
+  <view id="5" class="tabbox {{ menuId === 5 ? 'curtab' : ''}} " bindtap="clickCurTab">
+    <view class="tabico ico-car {{ menuId === 5 ? 'cur-car' : ''}}"></view>
+    <text class="tabit {{ menuId === 5 ? 'curit' : ''}}">汽车用品</text>
+  </view>
+</view>
+<view class="swiper">
+  <swiper class="adbox" indicator-dots="{{ indicatorDots }}" style="width: {{ imageWidth }}px; " autoplay="{{ autoplay }}" interval="{{ interval }}" duration="{{ duration }}" 	circular>
+    <block wx:for="{{ imgUrls }}" wx:key="id">
+      <swiper-item>
+        <image id="{{ item.iTargetType }} {{ item.sLink }}" class="slide-image" style="width: {{ imageWidth }}; " src="{{item.sPicLink}}" mode="scaleToFill" data-gid="{{item.sLink}}" bindtap="bigImageClick" bindload="imageLoad"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="list">
+  <text class="list-title">商品推荐</text>
+  <view class="list-inner">
+    <block wx:for="1000000000" wx:key="id">
+      <view class="item">
+        <view class="flag">热卖</view>
+        <view class="img">
+          <view class="img-inner">
+            <image src="https://img20.360buyimg.com/seckillcms/s280x280_jfs/t1/8135/29/17683/71029/62ad8d03E65900a2f/3b686eec9bd0f8f8.jpg.avif"></image>
+          </view>
+          <text class="item-title">商品描述标题商品描述标题商品描述标题</text>
+          <view class="price">
+            <text class="now-price">￥100</text>
+            <text class="old-price">￥299</text>
+            <view class="cart"></view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

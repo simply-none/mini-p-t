@@ -1,0 +1,39 @@
+.class {
+  padding: 3px 12px;
+}
+
+.large-text {
+  font-size: 36px;
+}
+
+.class .arrright {
+  background-image: url(https://img2.baidu.com/it/u=2808711530,3836549725&fm=253&fmt=auto&app=138&f=JPEG?w=260&h=260);
+  background-size: 100% 100%;
+  width: 24px;
+  height: 24px;
+}
+
+.class-link,
+.list-item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  font-size: 18px;
+  padding: 3px 0;
+}
+
+.class-link {
+  font-weight: 600;
+  border-bottom: 1px solid rgb(177, 177, 177);
+}
+
+.class-list-sub {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.sub-item {
+  width: 33%;
+  padding: 3px 0;
+}
+

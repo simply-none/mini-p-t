@@ -1,0 +1,3 @@
+<view bind:getdata="getDataListenerOnParentRoot">
+  <slot></slot>
+</view>

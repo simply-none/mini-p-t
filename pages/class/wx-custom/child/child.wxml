@@ -1,0 +1,4 @@
+<view bind:getdata="getDataListenerOnChildRoot">
+  <slot></slot>
+  <button bindtap="onTap">获取测试数据，点击</button>
+</view>

@@ -1,0 +1,13 @@
+<!--pages/class/custom/custom.wxml-->
+<view style="{{style}}" class="large-text">
+  <text class="cus" id="cus">{{ innerText }}</text>
+  <slot></slot>
+  <parent-com bind:getdata="getDataListenerOnParent">
+    <child-com bind:getdata="getDataListenerOnChild">
+    <button bindtap="onTap">开始测试点击事件</button>
+    <button bindtap="sysFileTest">文件系统测试</button>
+    <view wx:for="{{src}}" wx:for-item="sss" >{{sss}}</view>
+    <image wx:for="{{src}}" wx:for-item="sss" src="{{sss}}" mode="aspectFit"></image>
+    </child-com>
+    </parent-com>
+</view>

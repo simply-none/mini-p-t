@@ -1,0 +1,25 @@
+<view class="list">
+  <text class="list-title" bindtap="getUser">商品推荐</text>
+  <button open-type="getPhoneNumber" bindgetphonenumber="bindgetphonenumber">获取信息</button>
+  <scroll-view 	refresher-enabled style="height: 600px;" scroll-y="true" class="list-inner" bindscrolltolower="getNextData" 	bindrefresherpulling="bindrefresherpulling" 	bindrefresherrefresh="bindrefresherrefresh" 	bindrefresherrestore="bindrefresherrestore" bindrefresherabort="bindrefresherabort">
+    <block wx:for="{{tabbar}}" wx:key="id">
+      <view class="item">
+        <view class="flag">热卖</view>
+        <view class="img">
+          <view class="img-inner">
+            <image src="https://img20.360buyimg.com/seckillcms/s280x280_jfs/t1/8135/29/17683/71029/62ad8d03E65900a2f/3b686eec9bd0f8f8.jpg.avif"></image>
+          </view>
+          <text class="item-title">商品描述标题商品描述标题商品描述标题</text>
+          <view class="price">
+            <text class="now-price">￥100</text>
+            <text class="old-price">￥299</text>
+            <view class="cart"></view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <view wx:if="{{ scrollEnd }}">
+      <text style="display: inline-block;width: 100%;text-align: center;">已到底部</text>
+    </view>
+  </scroll-view>
+</view>

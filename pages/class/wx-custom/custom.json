@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "parent-com": "./parent/parent",
+    "child-com": "./child/child"
+  }
+}
